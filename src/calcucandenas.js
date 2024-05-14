@@ -8,7 +8,8 @@ function calculadora(chain) {
       return Number(numbers[0]);
     else
       for(const num of numbers){
-        acc = acc + Number(num);
+        if(num <= 1000)
+          acc = acc + Number(num);
       }    
     return acc;
   }
