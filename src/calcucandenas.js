@@ -7,7 +7,9 @@ function calculadora(chain) {
     if(numbers.length == 1)
       return Number(numbers[0]);
     else
-      acc = acc + Number(numbers[0]) + Number(numbers[1]);
+      for(const num of numbers){
+        acc = acc + Number(num);
+      }    
     return acc;
   }
 }
