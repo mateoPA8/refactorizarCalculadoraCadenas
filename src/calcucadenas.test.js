@@ -19,4 +19,7 @@ describe("Sumar", () => {
   it("deberia ignorar los numeros mayores a 1000 en la suma, si se le envia: '2-4-5-4-1-10,1000,1001,1050' devuelve 1026", () => {
     expect(calculadora("2-4-5-4-1-10,1000,1001,1050")).toEqual(1026);
   });
+  it("deberia devolver 26 si le enviamos una cadena con varios numeros y un delimitador nuevo definido al principio de la cadena como: '//[;],4;5,4;1-10'", () => {
+    expect(calculadora("//[;],2,4;5,4;1-10")).toEqual(26);
+  });
 });
