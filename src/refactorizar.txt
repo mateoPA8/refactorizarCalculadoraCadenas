@@ -1,0 +1,3 @@
+nombre de la funcion debe ser una accion y debe revelar la intencion
+funcion es grande
+nombre del parametro

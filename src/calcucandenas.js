@@ -1,4 +1,4 @@
-function calculadora(chain) {
+function addNumbersIn(chain) {
   let delimiters = [',', '-', /[,|-]/];
   let numbers = chain;
   let acc = 0;
@@ -6,6 +6,8 @@ function calculadora(chain) {
 
   if(delimiterMatch){
     const delimiter = delimiterMatch[1];
+    console.log(delimiterMatch[0]);
+    console.log(delimiterMatch[1]);
     delimiters.pop();
     delimiters.push(new RegExp(`[${delimiter}|,|-]`));
     numbers = chain.slice(delimiterMatch[0].length +3 );
@@ -27,4 +29,4 @@ function calculadora(chain) {
   return Number(numbers[0]);
 }
 
-export default calculadora;
+export default addNumbersIn;
