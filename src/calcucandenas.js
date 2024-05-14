@@ -2,7 +2,6 @@ function calculadora(chain) {
   let delimiters = [',', '-', /[,|-]/];
   let numbers = chain;
   let acc = 0;
-
   const delimiterMatch = chain.match(/^\/\/\[(.)\]/);
 
   if(delimiterMatch){
@@ -17,18 +16,15 @@ function calculadora(chain) {
   if(chain === "")
     return 0;
 
-  if(numbers.length == 1)
-    return Number(numbers[0]);
-
-  else{  
-
+  if(numbers.length != 1){
     for(const num of numbers){
       if(num <= 1000)
         acc = acc + Number(num);
-    }    
-
+    }  
     return acc;
   }
+  
+  return Number(numbers[0]);
 }
 
 export default calculadora;
