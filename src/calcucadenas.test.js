@@ -13,4 +13,7 @@ describe("Sumar", () => {
   it("deberia devolver 26 si le enviamos una cadena con varios numeros: '2,4,5,4,1,10'", () => {
     expect(calculadora("2,4,5,4,1,10")).toEqual(26);
   });
+  it("deberia devolver 26 si le enviamos una cadena con varios numeros separados por guiones: '2-4-5-4-1-10'", () => {
+    expect(calculadora("2-4-5-4-1-10")).toEqual(26);
+  });
 });

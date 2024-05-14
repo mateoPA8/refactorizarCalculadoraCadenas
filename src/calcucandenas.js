@@ -2,7 +2,7 @@ function calculadora(chain) {
   if(chain === "")
     return 0;
   else{
-    let numbers = chain.split(',');
+    let numbers = chain.split(/[,|-]/);
     let acc = 0;
     if(numbers.length == 1)
       return Number(numbers[0]);
